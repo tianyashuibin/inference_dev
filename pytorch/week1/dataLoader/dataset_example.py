@@ -28,4 +28,20 @@ sample_x, sample_y = my_dataset[0]
 print(f"第 0 个样本的特征形状: {sample_x.shape}")
 print(f"第 0 个样本的标签: {sample_y}")
 
+print(f"\n=== 2. 使用DataLoader 批量加载数据 ===")
+# num_workers: 开启多少个线程来加载数据
+train_loader = DataLoader(dataset=my_dataset,
+                          batch_size=16,
+                          shuffle=True,
+                          num_workers=0)
+
+print(f"开始模拟训练时的分批次提取：")
+for batch_idx, (batch_features, batch_labels) in enumerate(train_loader):
+    print(f"批次 {batch_idx}:")
+    print(f" 特征形状(Batch X): {batch_features.shape}")
+    print(f" 标签形状(Batch Y): {batch_labels.shape}")
+
+    if batch_idx == 2:
+        break;
+
 

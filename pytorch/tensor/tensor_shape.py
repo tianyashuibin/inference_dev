@@ -10,7 +10,7 @@ print(f"原始形状: {x.shape}")
 # 假设输入特征图形状是 [batch_size, channels, high, width] -> (64, 32, 7, 7)
 # 展平（Flatten）为一维向量，传给全连接层
 # flat_x = x.view(x.size(0), -1)  # 变为 (64, 1568)
-x_flatten = x.view(16) 
+x_flatten = x.view(16)
 x_flatten_auto = x.view(2, -1) # 变成 2行，列数自动计算(8)
 print(f"展平后的形状: {x_flatten.shape}")
 print(f"自动计算维度的形状: {x_flatten_auto.shape}")
@@ -18,11 +18,11 @@ print(f"自动计算维度的形状: {x_flatten_auto.shape}")
 print("\n=== 4. 增加/压缩维度 (Unsqueeze / Squeeze) ===")
 # 【实战场景】：你有一张图片，形状是 [Channels, Height, Width] ->[3, 224, 224]
 # 但网络需要的输入总是带 Batch Size 的，即[Batch, Channels, Height, Width]
-img = torch.randn(3, 224, 224) 
+img = torch.randn(3, 224, 224)
 print(f"单张图片形状: {img.shape}")
 
 # 在第0维（最前面）增加一个维度，代表 Batch Size = 1
-img_batch = img.unsqueeze(0) 
+img_batch = img.unsqueeze(0)
 print(f"增加 Batch 维度后: {img_batch.shape}") # 变成[1, 3, 224, 224]
 
 # squeeze 会把所有维度大小为 1 的维度去掉
@@ -39,7 +39,7 @@ print("\n=== 5. 维度交换 (Transpose / Permute) ===")
 # 或者是将 [Batch, Channels, H, W] 转成画图库支持的 [Batch, H, W, Channels]
 x_img = torch.randn(1, 3, 64, 64)
 # permute 可以重新排列所有维度 (此处把 Channels 移到最后)
-x_permuted = x_img.permute(0, 2, 3, 1) 
+x_permuted = x_img.permute(0, 2, 3, 1)
 print(f"Permute 后的形状: {x_permuted.shape}") # 变成 [1, 64, 64, 3]
 
 

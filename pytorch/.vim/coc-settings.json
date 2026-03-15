@@ -1,0 +1,10 @@
+{
+  "python.defaultInterpreterPath": "/Users/minim4/miniconda3/envs/pytorch_env/bin/python",
+  "python.venvPath": "/Users/minim4/miniconda3/envs",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.useLibraryCodeForTypes": true,
+  "python.analysis.extraPaths": [
+    "/Users/minim4/miniconda3/envs/pytorch_env/lib/python3.11/site-packages"
+  ],
+  "python.analysis.diagnosticMode": "workspace"
+}

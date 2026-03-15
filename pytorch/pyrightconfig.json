@@ -1,0 +1,7 @@
+{
+  "venvPath": "/Users/minim4/miniconda3/envs",
+  "venv": "pytorch_env",
+  "pythonVersion": "3.11",
+  "include": ["."],
+  "typeCheckingMode": "basic"
+}

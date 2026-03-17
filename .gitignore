@@ -1,3 +1,5 @@
 .vscode
 *.pt
 *.pth
+
+pytorch/week2/data

@@ -6,4 +6,5 @@
 .DS_Store
 .DS_Store?
 
-pytorch/week2/data
+*.dSYM/
+pytorch/week2/data/
